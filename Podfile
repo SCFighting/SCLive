@@ -1,0 +1,23 @@
+target 'SCLive' do
+  use_frameworks!
+  pod 'AFNetworking', '~> 3.2.1'
+  pod 'Masonry'
+  pod 'TXLiteAVSDK_Professional_Rename'
+  pod 'MBProgressHUD'
+  pod 'Colours'
+  pod 'SDWebImage'
+  pod 'MJRefresh'
+  pod 'MJExtension'
+  pod 'UMCCommon'
+  pod 'UMCSecurityPlugins'
+  pod 'UMCShare/Social/WeChat'
+  pod 'UMCShare/Social/QQ'
+  pod 'UMCShare/Social/Sina'
+  pod 'IQKeyboardManager'
+  pod 'YYText'
+  pod 'VPImageCropper'
+  pod 'GPUImage'
+  pod 'TZImagePickerController'
+  pod 'FFToast'
+  pod 'JKCountDownButton'
+end
