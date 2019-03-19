@@ -98,6 +98,13 @@
     [super viewWillAppear:animated];
     NSLog(@"test");
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    NSLog(@"test");
+    NSLog(@"test");
+    NSLog(@"test");
+    NSLog(@"test");NSLog(@"test");
+    NSLog(@"test");
+    NSLog(@"test");
+    NSLog(@"test");
 }
 
 -(void)viewDidAppear:(BOOL)animated
