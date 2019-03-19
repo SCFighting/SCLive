@@ -45,11 +45,25 @@
 -(void)setupSubviewConstaints
 {
     [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.view);
+        if (@available(iOS 11.0, *)) {
+            make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop);
+            make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+            make.left.right.mas_equalTo(self.view);
+        } else {
+            // Fallback on earlier versions
+            make.top.mas_equalTo(self.mas_topLayoutGuide);
+            make.bottom.mas_equalTo(self.mas_bottomLayoutGuide);
+            make.left.right.mas_equalTo(self.view);
+        }
     }];
     
     [self.emailTextFiled mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.containerView.mas_top).offset(150);
+        if (@available(iOS 11.0, *)) {
+            make.top.mas_equalTo(self.containerView.mas_safeAreaLayoutGuideTop).offset(150);
+        } else {
+            // Fallback on earlier versions
+            make.top.mas_equalTo(self.containerView.mas_top).offset(150);
+        }
         make.centerX.equalTo(self.containerView);
         make.size.mas_equalTo(CGSizeMake(300, 44));
     }];
@@ -83,6 +97,12 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    
+    [super viewDidAppear:animated];
     [self.emailTextFiled becomeFirstResponder];
 }
 
@@ -134,6 +154,7 @@
 {
     if (_containerView == nil) {
         _containerView = [[UIView alloc] init];
+        _containerView.backgroundColor = UIColor.redColor;
     }
     return _containerView;
 }
@@ -216,5 +237,9 @@
     }
     return _loginTool;
 }
+
+//- (UIRectEdge)edgesForExtendedLayout {
+//    return UIRectEdgeNone;
+//}
 
 @end
