@@ -28,7 +28,7 @@ PODS:
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
-  - TXLiteAVSDK_Professional_Rename (5.2.5541)
+  - TXLiteAVSDK_Professional (7.2.8940)
   - TZImagePickerController (3.1.9)
   - UMCCommon (2.0.0)
   - UMCSecurityPlugins (1.0.6)
@@ -59,7 +59,7 @@ PODS:
   - YYText (1.0.7)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.2.1)
+  - AFNetworking
   - Colours
   - FFToast
   - GPUImage
@@ -70,7 +70,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - SDWebImage
-  - TXLiteAVSDK_Professional_Rename
+  - TXLiteAVSDK_Professional
   - TZImagePickerController
   - UMCCommon
   - UMCSecurityPlugins
@@ -81,7 +81,7 @@ DEPENDENCIES:
   - YYText
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - Colours
     - FFToast
@@ -93,13 +93,14 @@ SPEC REPOS:
     - MJExtension
     - MJRefresh
     - SDWebImage
-    - TXLiteAVSDK_Professional_Rename
     - TZImagePickerController
     - UMCCommon
     - UMCSecurityPlugins
     - UMCShare
     - VPImageCropper
     - YYText
+  trunk:
+    - TXLiteAVSDK_Professional
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -113,7 +114,7 @@ SPEC CHECKSUMS:
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
-  TXLiteAVSDK_Professional_Rename: 1d3fc851901982af4bd0f01992f3e0287e73e5f9
+  TXLiteAVSDK_Professional: 4afe0775eeff059219964472fd4fa0f1ea4ca860
   TZImagePickerController: c3f7c505d23281e21e98df6dbeae372946caa28f
   UMCCommon: 79b5a614c958db367113eed5740109d9a98e1223
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
@@ -121,6 +122,6 @@ SPEC CHECKSUMS:
   VPImageCropper: f4895315460bd05fbb22dbee6b063bdd43f25797
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 1f6d18b1bfbc1a956b0c7ac7959bc96eb4f39590
+PODFILE CHECKSUM: f1f6bb89725ac99e8d21a460c3104c64e3fd1a5c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3

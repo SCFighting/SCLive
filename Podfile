@@ -1,8 +1,8 @@
 target 'SCLive' do
   use_frameworks!
-  pod 'AFNetworking', '~> 3.2.1'
+  pod 'AFNetworking'
   pod 'Masonry'
-  pod 'TXLiteAVSDK_Professional_Rename'
+  pod 'TXLiteAVSDK_Professional'
   pod 'MBProgressHUD'
   pod 'Colours'
   pod 'SDWebImage'

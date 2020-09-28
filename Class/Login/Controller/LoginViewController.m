@@ -20,35 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    if ([[NSUserDefaults standardUserDefaults] integerForKey:USER_ID] > 0)
-    {
-        [MBProgressHUD showLoadText:@"登录中..."];
-        if ([[[NSUserDefaults standardUserDefaults] objectForKey:LOGIN_STYLE] isEqualToString:@"system"]) //邮箱自动登录
-        {
-            [self.loginTool loginByEmail:[[NSUserDefaults standardUserDefaults] objectForKey:ACCOUNT] passWorld:[[NSUserDefaults standardUserDefaults] objectForKey:PASSWORLD] result:^(BOOL result, id  _Nonnull responseObject, NSError * _Nonnull error) {
-                if (!result&&!responseObject)
-                {
-                    [self handelRequestFailed:error];
-                    [self.loginTool cleanUserInfo];
-                }else
-                {
-                    [self handelRequestSuccess:responseObject shouldcontinue:^(BOOL shouldcontinue) {
-                        [MBProgressHUD hidenHUD];
-                        if (shouldcontinue) {
-                            [self jumpToHome];
-                        }
-                    }];
-                }
-            }];
-        }else if ([[[NSUserDefaults standardUserDefaults] objectForKey:LOGIN_STYLE] isEqualToString:@"wechat"]) //微信自动登录
-        {
-            
-        }else //登录信息出错,清除登录信息手动登录
-        {
-            [self.loginTool cleanUserInfo];
-        }
-    }
+//
+    [self jumpToHome];
 }
 
 -(void)viewWillAppear:(BOOL)animated
